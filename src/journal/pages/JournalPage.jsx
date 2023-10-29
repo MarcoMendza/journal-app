@@ -14,8 +14,6 @@ export const JournalPage = () => {
   const onClickNewNote = () => {
     dispatch( startNewNote() )
   }
-
-  console.log(active)
   
   return (
     <JournalLayout>

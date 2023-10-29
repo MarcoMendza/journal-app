@@ -31,9 +31,9 @@ export const SideBar = ({ drawerWidth = 240 }) => {
 
             <List>
                 {
-                    notes.map( note => (
-                        <SideBarItem key={ note.id} { ...note } />                        
-                    ))
+                    notes.map((note, index) => (
+                        <SideBarItem key={ note.id ? note.id : index } { ...note } />                        
+                    ))                    
                 }
             </List>
         </Drawer>
