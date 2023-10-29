@@ -3,7 +3,7 @@ import { AppBar, Grid, IconButton, Toolbar, Typography } from '@mui/material'
 import { useDispatch } from 'react-redux';
 import { startLogout } from '../../store/auth';
 
-export const NavBar = ({ drawerWidth = 240  }) => {
+export const NavBar = ({ drawerWidth = 240, toggleDrawer, isDesktop }) => {
 
     const dispatch = useDispatch();
 
@@ -23,7 +23,8 @@ export const NavBar = ({ drawerWidth = 240  }) => {
             <IconButton
                 color='inherit'
                 edge= 'start'
-                sx = {{ mr:2, display: { sm: 'none'}}}
+                onClick={toggleDrawer}
+                sx = {{ mr:2, display: { sm: 'none' } }}
             >
                 <MenuOutlined />
             </IconButton>
